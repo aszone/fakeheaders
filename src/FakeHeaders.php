@@ -1,6 +1,6 @@
 <?php
 
-namespace Aszone\Component\SearchHacking\Lib\FakeHeaders;
+namespace Aszone\FakeHeaders;
 
 class FakeHeaders
 {
