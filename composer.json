@@ -1,0 +1,22 @@
+{
+  "name": "aszone/fakeheadres",
+  "type": "library",
+  "description": "AsZone Component - Fake Headers",
+  "keywords": ["header","html","request","post","fake","get"],
+  "homepage": "http://www.lenonleite.com.br",
+  "license": "MIT",
+  "version": "0.1",
+  "authors": [
+    {
+      "name": "Lenon Leite",
+      "email": "lenonleite@gmail.com.br",
+      "homepage": "http://www.lenonleite.com.br"
+    },
+    {
+      "name": "ASZone",
+      "homepage": "https://www.aszone.com.br"
+    }
+
+  ],
+  "minimum-stability": "stable"
+}
