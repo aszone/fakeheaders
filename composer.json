@@ -23,7 +23,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Aszone\\FakeHeaders\\": "src/"
+      "Aszone\\": "src/"
     }
   },
   "minimum-stability": "stable"
