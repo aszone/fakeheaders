@@ -21,5 +21,10 @@
   "require": {
     "php": ">=5.3.9"
   },
+  "autoload": {
+    "psr-4": {
+      "ASZone\\FakeHeaders": "src/"
+    }
+  },
   "minimum-stability": "stable"
 }

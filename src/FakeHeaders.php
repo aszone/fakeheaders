@@ -12,9 +12,9 @@ class FakeHeaders
 
     public function __construct()
     {
-        $this->pathBrowser = __DIR__.'/resource/UserAgent/Browser.ini';
-        $this->pathSystem = __DIR__.'/resource/UserAgent/System.ini';
-        $this->pathLocale = __DIR__.'/resource/UserAgent/Locale.ini';
+        $this->pathBrowser = __DIR__ . '/resource/UserAgent/Browser.ini';
+        $this->pathSystem = __DIR__ . '/resource/UserAgent/System.ini';
+        $this->pathLocale = __DIR__ . '/resource/UserAgent/Locale.ini';
     }
 
     public function getUserAgent()
