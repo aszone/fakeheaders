@@ -1,6 +1,6 @@
 <?php
 
-namespace Aszone;
+namespace Aszone\FakeHeaders;
 
 class FakeHeaders
 {
