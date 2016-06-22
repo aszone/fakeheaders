@@ -1,5 +1,5 @@
 {
-  "name": "aszone/fakeheadres",
+  "name": "aszone/fakeheaders",
   "type": "library",
   "description": "AsZone Component - Fake Headers",
   "keywords": ["header","html","request","post","fake","get"],
