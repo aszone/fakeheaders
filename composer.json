@@ -5,6 +5,7 @@
   "keywords": ["header","html","request","post","fake","get"],
   "homepage": "http://www.lenonleite.com.br",
   "license": "MIT",
+  "version": "0.1",
   "authors": [
     {
       "name": "Lenon Leite",
