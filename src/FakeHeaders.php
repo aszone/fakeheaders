@@ -4,31 +4,58 @@ namespace Aszone\FakeHeaders;
 
 class FakeHeaders
 {
-    public $pathBrowser;
+    private $browserFile = __DIR__ . '/../resources/UserAgent/Browser.ini';
+    
+    private $systemFile = __DIR__ . '/../resources/UserAgent/System.ini';
+    
+    private $localeFile = __DIR__ . '/../resources/UserAgent/Locale.ini';
 
-    public $pathSystem;
+    private $browser, $system, $locale;
 
-    public $pathLocale;
-
-    public function __construct()
+    private function parseIniFiles()
     {
-        $this->pathBrowser = __DIR__ . '/resource/UserAgent/Browser.ini';
-        $this->pathSystem = __DIR__ . '/resource/UserAgent/System.ini';
-        $this->pathLocale = __DIR__ . '/resource/UserAgent/Locale.ini';
+        $this->browser = parse_ini_file($this->browserFile);
+        $this->system  = parse_ini_file($this->systemFile);
+        $this->locale  = parse_ini_file($this->localeFile);
+    }
+
+    public function setBrowserFile($file)
+    {
+        $this->browserFile = $file;
+    }
+
+    public function setSystemFile($file)
+    {
+        $this->systemFile = $file;
+    }
+
+    public function setLocaleFile($file)
+    {
+        $this->localeFile = $file;
     }
 
     public function getUserAgent()
     {
-        $browser = parse_ini_file($this->pathBrowser);
-        $system = parse_ini_file($this->pathSystem);
-        $Locale = parse_ini_file($this->pathLocale);
+        $this->parseIniFiles();
 
-        $randBrowser = $browser[rand(0, count($browser) - 1)];
-        $randSystem = $system[rand(0, count($system) - 1)];
-        $randLocale = $Locale[rand(0, count($Locale) - 1)];
+        $randBrowser = $this->browser[rand(0, count($this->browser) - 1)];
+        $randSystem  = $this->system[rand(0, count($this->system) - 1)];
+        $randLocale  = $this->locale[rand(0, count($this->locale) - 1)];
 
-        $userAgent = $randBrowser.'/'.rand(1, 20).'.'.rand(0, 20).' ('.$randSystem.' '.rand(1, 7).'.'.rand(0, 9).'; '.$randLocale.';)';
+        $format = "%s/%d.%d (%s %d.%d; %s;)";
 
-        return array('User-Agent' => $userAgent);
+        $userAgent = sprintf(
+            $format, 
+            $randBrowser, 
+            rand(1, 20),
+            rand(0, 20),
+            $randSystem,
+            rand(1, 7),
+            rand(0, 9),
+            $randLocale
+        );
+
+        return ['User-Agent' => $userAgent];
     }
 }
+
