@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/aszone/fakeheaders.svg?branch=master)](https://travis-ci.org/aszone/fakeheaders)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aszone/fakeheaders/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aszone/fakeheaders/?branch=master)
+
 # Fake Header
 
 > Fake Header is script for create fake headers for request html
