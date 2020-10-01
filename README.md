@@ -5,7 +5,7 @@
 
 > Fake Header is script for create fake headers for request html
 
-## Instalation 
+## Installation  
 
 The recommended way to install PHP Avenger is through
 [Composer](http://getcomposer.org).
